@@ -15,3 +15,16 @@
 /* The accent dot does not participate in centering the KB initials. */
 .brand-monogram{position:relative}
 .brand-dot{position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);font-size:15px;line-height:1;color:var(--cyan);pointer-events:none}
+
+/* Personal portrait prominently displayed in the hero (self-photo requirement). */
+.hero-visual{display:flex;align-items:center;justify-content:center;min-height:540px;padding:20px 34px 18px 62px}
+.portrait-card{position:relative;isolation:isolate;display:block;margin:0;width:min(100%,415px);aspect-ratio:512/608;overflow:hidden;border-radius:27px;border:1px solid rgba(168,223,231,.45);background:#17283d;box-shadow:0 32px 85px rgba(0,0,0,.43),0 0 0 10px rgba(136,222,222,.055);transform:rotate(1.5deg)}
+.hero-visual .portrait-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;animation:none;filter:none;transform:none}
+.portrait-card:after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(180deg,transparent 25%,rgba(2,10,23,.77));pointer-events:none}
+.portrait-caption{position:absolute;bottom:18px;left:23px;z-index:2;display:flex;align-items:center;gap:9px;color:#fff;letter-spacing:.14em;font-size:10px;font-weight:800;text-shadow:0 2px 7px #000a}
+.portrait-caption-dot{width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #79e2da32}
+.workflow-sticker{position:absolute;z-index:3;bottom:0;left:-6px;width:42%;max-width:215px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#172d43,#263d56);border-radius:20px;border:1px solid rgba(160,217,230,.4);box-shadow:0 15px 45px #030b1cae;transform:rotate(-5deg)}
+.hero-visual .workflow-sticker-image{width:100%;height:auto;animation:none;filter:none}
+@media(max-width:1050px){.hero-visual{padding:10px 4px 10px 22px;min-height:470px}.workflow-sticker{width:40%;left:-13px}}
+@media(max-width:760px){.hero-visual{width:min(100%,500px);padding:22px 15px 23px 35px;min-height:0}.portrait-card{width:min(100%,385px)}.workflow-sticker{width:40%;left:0;bottom:0}}
+@media(max-width:460px){.hero-visual{padding-left:24px;padding-right:6px}.portrait-card{border-radius:20px}.workflow-sticker{width:39%;border-radius:14px;left:-3px;bottom:0}.portrait-caption{font-size:9px;bottom:13px;left:16px}}
